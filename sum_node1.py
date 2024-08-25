@@ -10,9 +10,11 @@ def sum_numbers(numbers):
 
 # Prepare to receive data, socket TCP ipv4 , 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_socket.bind(('127.0.0.1', 5000)) 
+url_linux = '127.0.0.1'
+port_linux = 5000
+server_socket.bind((url_linux, port_linux)) 
 server_socket.listen(1), #backlog of zero 
-print("Node  1 listening for connections...")
+print("Node 1  (Linux) listening for connections...")
 
 
 

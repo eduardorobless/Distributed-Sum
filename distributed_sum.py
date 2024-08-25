@@ -1,6 +1,6 @@
 import socket 
 import json 
- 
+import os 
 
 
 
@@ -25,9 +25,16 @@ mid = len(numbers) // 2
 numbers_node1 = numbers[:mid]
 numbers_node2 = numbers[mid:]
 
+
+
 # send to nodes 
-result1 = send_data_to_node('127.0.0.1', 5000, numbers_node1)
-result2 = send_data_to_node('192.168.100.17', 5000, numbers_node2)
+url_linux = '127.0.0.1'
+port_linux = 5000
+result1 = send_data_to_node(url_linux, port_linux, numbers_node1)
+
+url_windows = os.getenv('URL_WINDOWS')
+port_windows = 5000
+result2 = send_data_to_node(port_windows, port_windows, numbers_node2)
 
 
 

@@ -1,6 +1,6 @@
 import socket 
 import json 
-
+import os
 def sum_numbers(numbers):
     return sum(numbers)
 
@@ -10,9 +10,11 @@ def sum_numbers(numbers):
 
 # Prepare to receive data, socket TCP ipv4 , 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_socket.bind(('192.168.100.17', 5000)) 
+url_windows = os.getenv('MY_URL')
+port_windows = 5000
+server_socket.bind((url_windows, port_windows)) 
 server_socket.listen(1), #backlog of zero 
-print("Node 2 listening for connections...")
+print("Node 2 (Windows) listening for connections...")
 
 
 
