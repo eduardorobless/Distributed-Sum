@@ -28,14 +28,13 @@ numbers_node2 = numbers[mid:]
 
 
 # send to nodes 
-url_linux = '127.0.0.1'
-port_linux = 5000
-result1 = send_data_to_node(url_linux, port_linux, numbers_node1)
+url1 = '127.0.0.1'
+port1 = 5000
+result1 = send_data_to_node(url1, port1, numbers_node1)
 
-url_windows = os.getenv('URL_WINDOWS')
-print(url_windows)
-port_windows = 5000
-result2 = send_data_to_node(url_windows, port_windows, numbers_node2)
+url2 = os.getenv('HOST11')
+port2 = 5000
+result2 = send_data_to_node(url2, port2, numbers_node2)
 
 
 

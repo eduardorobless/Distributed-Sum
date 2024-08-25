@@ -14,9 +14,7 @@ url_linux = '127.0.0.1'
 port_linux = 5000
 server_socket.bind((url_linux, port_linux)) 
 server_socket.listen(1), #backlog of zero 
-print("Node 1  (Linux) listening for connections...")
-
-
+print("Node 1 listening for connections...")
 
 
 connection, client_address = server_socket.accept()  # accept incoming connection

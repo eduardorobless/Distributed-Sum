@@ -14,7 +14,7 @@ url_windows = os.getenv('MY_URL')
 port_windows = 5000
 server_socket.bind((url_windows, port_windows)) 
 server_socket.listen(1), #backlog of zero 
-print("Node 2 (Windows) listening for connections...")
+print("Node 2 listening for connections...")
 
 
 
