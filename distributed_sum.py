@@ -33,8 +33,9 @@ port_linux = 5000
 result1 = send_data_to_node(url_linux, port_linux, numbers_node1)
 
 url_windows = os.getenv('URL_WINDOWS')
+print(url_windows)
 port_windows = 5000
-result2 = send_data_to_node(port_windows, port_windows, numbers_node2)
+result2 = send_data_to_node(url_windows, port_windows, numbers_node2)
 
 
 
